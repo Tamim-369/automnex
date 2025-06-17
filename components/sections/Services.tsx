@@ -43,6 +43,32 @@ const services = [
             'Intuitive user interface',
         ],
     },
+    {
+        icon: <Rocket className="w-7 h-7 text-white" />,
+        title: 'LLM PDF Q&A Agent',
+        description:
+            'Upload PDFs and get instant, context-aware answers powered by cutting-edge LLM embeddings.',
+        features: [
+            'Semantic PDF content extraction',
+            'Contextual real-time answers',
+            'Multi-document support',
+            'Lightning-fast response times',
+            'Intuitive user interface',
+        ],
+    },
+    {
+        icon: <Rocket className="w-7 h-7 text-white" />,
+        title: 'LLM PDF Q&A Agent',
+        description:
+            'Upload PDFs and get instant, context-aware answers powered by cutting-edge LLM embeddings.',
+        features: [
+            'Semantic PDF content extraction',
+            'Contextual real-time answers',
+            'Multi-document support',
+            'Lightning-fast response times',
+            'Intuitive user interface',
+        ],
+    },
 ];
 
 export default function Services() {
@@ -64,31 +90,28 @@ export default function Services() {
 
                 <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-3">
                     {services.map((service, i) => (
-                        <div
-                            key={i}
-                            className="group relative rounded-3xl bg-black/30 backdrop-blur-lg border border-white/30 p-8 shadow-md transition-transform duration-300 hover:scale-[1.03] hover:shadow-xl cursor-pointer"
-                        >
-                            <div className="flex items-center space-x-4 ">
-                                <div className="p-3 rounded-full bg-white/20">
-                                    {service.icon}
+                        <div className="w-full max-w-md bg-black/20 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 rounded-2xl overflow-hidden">
+                            <div className="p-6 bg-black/30 ">
+                                <div className="flex items-center space-x-4">
+                                    <div className="p-3 bg-white/10 rounded-full">
+                                        {service.icon}
+                                    </div>
+                                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
                                 </div>
-                                <h3 className="text-xl font-bold text-white">{service.title}</h3>
                             </div>
-                            <p className="text-sm sm:text-base font-semibold my-4 px-3 text-gray-200">{service.description}</p>
-
-
-
-                            <ul className="list-disc list-inside space-y-2 text-sm sm:text-sm text-gray-300">
-                                {service.features.map((feature, idx) => (
-                                    <li
-                                        key={idx}
-                                        className="relative pl-4 before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 "
-                                    >
-                                        {feature}
-                                    </li>
-                                ))}
-                            </ul>
-
+                            <div className="p-6">
+                                <p className="text-gray-200 mb-4">
+                                    {service.description}
+                                </p>
+                                <ul className="space-y-2 text-sm text-gray-300">
+                                    {service.features.map((feature, idx) => (
+                                        <li key={idx} className="flex items-center space-x-2">
+                                            <span className="text-white">✓</span>
+                                            <span>{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
                     ))}
 
