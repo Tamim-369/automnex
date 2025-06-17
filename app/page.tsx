@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer'
 import About from '@/components/sections/About'
 import Contact from '@/components/sections/Contact'
+import FAQ from '@/components/sections/FAQ'
 import Hero from '@/components/sections/Hero'
 import Services from '@/components/sections/Services'
 import { Button } from '@/components/ui/button'
@@ -13,6 +14,7 @@ function Home() {
       <Hero />
       <Services />
       <About />
+      <FAQ />
       <Contact />
       <Footer />
     </>
