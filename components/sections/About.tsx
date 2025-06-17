@@ -1,6 +1,6 @@
 export default function About() {
     return (
-        <section className="relative w-full px-6 py-10 text-white overflow-hidden">
+        <section id="about" className="relative w-full min-h-screen px-6 py-10 text-white overflow-hidden flex justify-center items-center">
             {/* Grid background */}
             <div className="absolute inset-0 z-0 pointer-events-none [mask-image:linear-gradient(to_bottom,white,transparent)] before:absolute before:inset-0 before:bg-[url('/grid.svg')] before:opacity-10" />
 
