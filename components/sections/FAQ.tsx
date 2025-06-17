@@ -1,8 +1,29 @@
 "use client";
 import React, { useState } from "react";
 
-const FAQSection = () => {
+import { useEffect } from 'react';
+
+const FAQ = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+    useEffect(() => {
+        const styles = `
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.6s ease-out;
+        }
+      `;
+        const style = document.createElement('style');
+        style.textContent = styles;
+        document.head.appendChild(style);
+
+        return () => {
+            style.remove();
+        };
+    }, []);
 
     const faqs = [
         {
@@ -102,19 +123,6 @@ const FAQSection = () => {
     );
 };
 
-// Animation styles
-const styles = `
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fadeIn {
-    animation: fadeIn 0.6s ease-out;
-  }
-`;
 
-const styleSheet = new CSSStyleSheet();
-styleSheet.replaceSync(styles);
-document.adoptedStyleSheets = [styleSheet];
 
-export default FAQSection;
+export default FAQ;
