@@ -31,7 +31,7 @@ const FAQSection = () => {
             {/* Foreground content */}
             <div className="relative max-w-4xl mx-auto z-20">
                 <h2
-                    className="text-6xl mb-10  font-extrabold uppercase tracking-wider z-10 select-none"
+                    className="text-4xl sm:text-6xl mb-10  font-extrabold uppercase tracking-wider z-10 select-none"
                     style={{
                         WebkitTextStroke: '1px rgba(255, 255, 255, 0.2)',
                         color: 'transparent',
