@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 const FAQSection = () => {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     const faqs = [
         {
@@ -46,11 +46,11 @@ const FAQSection = () => {
                             className="border-b border-white/10 last:border-b-0"
                         >
                             <button
-                                className="w-full text-left p-4 md:p-5 text-white text-lg md:text-xl font-semibold flex justify-between items-center hover:bg-black/40 transition-colors duration-200"
-                                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                                className="w-full text-left p-4 md:p-5 text-white text-lg md:text-xl font-semibold flex justify-between items-center bg-gray-800/15 border-b transition-colors duration-200"
+                                onClick={() => setOpenIndex(openIndex === index ? 0 : index)}
                             >
                                 {faq.question}
-                                <span>
+                                <span >
                                     {openIndex === index ? (
                                         <svg
                                             className="w-5 h-5"
