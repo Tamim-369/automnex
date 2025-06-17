@@ -55,11 +55,9 @@ const Navbar = () => {
             <div className="relative flex flex-wrap items-center justify-between gap-4">
               {/* Logo */}
               <div className="flex items-center space-x-3">
-                <div className="relative overflow-hidden rounded-lg bg-gradient-to-br from-white to-gray-400 p-2 transition-transform duration-300 group-hover:rotate-12">
-                  <Zap className="h-5 w-5 text-black" />
-                  <div className="absolute inset-0 -translate-x-full -translate-y-full rotate-45 bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-1000 animate-pulse" />
-                </div>
-                <span className="text-xl font-bold tracking-tight text-white">NeuralAI</span>
+                <img src={"/logo.png"} className="h-10 w-10 text-black" />
+
+                <span className="text-xl md:hidden font-bold tracking-tight text-white uppercase">Automnex</span>
               </div>
 
               {/* Desktop Navigation */}
@@ -113,10 +111,9 @@ const Navbar = () => {
                       {/* Mobile Navigation Links */}
                       <div className="flex flex-col space-y-2 px-6">
                         {navLinks.map((link, index) => (
-                          <Button
+                          <Link
+                            href={link.href}
                             key={link.name}
-                            variant="ghost"
-                            size="default"
                             onClick={() => setActiveLink(link.name)}
                             className={`justify-start rounded-xl px-8 py-4 text-left transition-all duration-300 ${activeLink === link.name
                               ? 'bg-gradient-to-r from-white/20 to-gray-300/20 text-white border border-white/30'
@@ -127,7 +124,7 @@ const Navbar = () => {
                             }}
                           >
                             {link.name}
-                          </Button>
+                          </Link>
                         ))}
                       </div>
 
