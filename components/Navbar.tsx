@@ -48,9 +48,9 @@ const Navbar = () => {
       </div>
 
       {/* Navbar */}
-      <nav className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 w-[95%] max-w-[1440px] xl:w-9/12 ${isScrolled ? 'top-4 scale-95' : 'top-6 scale-100'}`}>
-        <div className="mx-auto w-full px-2 sm:px-4 md:px-6">
-          <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-2xl transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl hover:shadow-white/10">
+      <nav className={`fixed  left-1/2 -translate-x-1/2 z-50 transition-all duration-500  ${isScrolled ? 'w-full sm:w-[95%] xl:w-10/12 top-0 sm:top-3' : 'top-3 md:top-6 w-[95%] max-w-[1440px] xl:w-9/12'}`}>
+        <div className="mx-auto w-full">
+          <div className={`group relative overflow-hidden ${isScrolled ? "rounded-none sm:rounded-2xl" : "rounded-2xl"}  border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-2xl transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:shadow-2xl hover:shadow-white/10`}>
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             <div className="relative flex flex-wrap items-center justify-between gap-4">
               {/* Logo */}
