@@ -127,7 +127,7 @@ const Contact = () => {
                                 disabled={isSubmitting}
                                 className="w-full bg-white text-black py-3 rounded-xl duration-200 font-medium cursor-pointer hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                {isSubmitting ? 'Sending...' : 'Submit'}
+                                {isSubmitting ? 'Sending...' : 'Let\'s Go!'}
                             </button>
                         </form>
                     )}
