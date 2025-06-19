@@ -1,46 +1,10 @@
 'use client';
 
+import { projects } from '@/lib/data';
 import { ExternalLink, Eye, Code2, Database, Globe, Smartphone } from 'lucide-react';
 import Link from 'next/link';
 
-const projects = [
-    {
-        id: 1,
-        title: 'AI Physique Rater',
-        description: 'An innovative AI-powered application that analyzes user-uploaded images to provide personalized physique ratings and exercise suggestions based on different studies.',
-        image: '/projects/physiqueRater.png',
-        techStack: ['Next.js', 'Groq', 'Langchain', 'Tailwind CSS', 'TypeScript'],
-        // viewDetailsLink: '#',
-        viewSiteLink: 'https://ai-physique-rater.vercel.app'
-    },
-    {
-        id: 2,
-        title: 'Real-Time Collaboration Tool',
-        description: 'A comprehensive workspace solution that enables teams to collaborate seamlessly with real-time document editing, video conferencing, and project management capabilities.',
-        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-        techStack: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'WebRTC', 'AWS'],
-        viewDetailsLink: '#',
-        viewSiteLink: '#'
-    },
-    {
-        id: 3,
-        title: 'Smart Healthcare Dashboard',
-        description: 'An intelligent healthcare management system that provides real-time patient monitoring, predictive health analytics, and seamless integration with medical devices.',
-        image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-        techStack: ['Vue.js', 'Django', 'PostgreSQL', 'Docker', 'IoT', 'ML'],
-        viewDetailsLink: '#',
-        viewSiteLink: '#'
-    },
-    {
-        id: 4,
-        title: 'Fintech Mobile Application',
-        description: 'A secure and intuitive mobile banking application with advanced features like AI-powered expense tracking, investment recommendations, and biometric authentication.',
-        image: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-        techStack: ['React Native', 'Firebase', 'Blockchain', 'Biometrics', 'AI/ML'],
-        viewDetailsLink: '#',
-        viewSiteLink: '#'
-    }
-];
+
 
 const getTechIcon = (tech: any) => {
     const techLower = tech.toLowerCase();
@@ -81,7 +45,7 @@ export default function Projects() {
                 </div>
 
                 <div className="space-y-32">
-                    {projects.map((project, index) => (
+                    {projects.map((project: any, index: number) => (
                         <div
                             key={project.id}
                             className={`flex flex-col items-center gap-12 lg:gap-16 ${index % 2 === 0
@@ -119,7 +83,7 @@ export default function Projects() {
                                         Tech Stack
                                     </h4>
                                     <div className={`flex flex-wrap gap-3 ${index % 2 === 1 ? 'lg:justify-end' : ''}`}>
-                                        {project.techStack.map((tech, techIndex) => (
+                                        {project.techStack.map((tech: any, techIndex: number) => (
                                             <div
                                                 key={techIndex}
                                                 className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-200 hover:bg-white/10 transition-colors duration-300"
