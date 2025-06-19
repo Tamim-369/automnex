@@ -1,16 +1,17 @@
 'use client';
 
 import { ExternalLink, Eye, Code2, Database, Globe, Smartphone } from 'lucide-react';
+import Link from 'next/link';
 
 const projects = [
     {
         id: 1,
-        title: 'AI-Powered E-Commerce Platform',
-        description: 'A revolutionary e-commerce platform that uses machine learning to provide personalized shopping experiences, smart inventory management, and predictive analytics for business growth.',
+        title: 'AI Physique Rater',
+        description: 'An innovative AI-powered application that analyzes user-uploaded images to provide personalized physique ratings and exercise suggestions based on different studies.',
         image: '/projects/physiqueRater.png',
-        techStack: ['Next.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Stripe'],
-        viewDetailsLink: '#',
-        viewSiteLink: '#'
+        techStack: ['Next.js', 'Groq', 'Langchain', 'Tailwind CSS', 'TypeScript'],
+        // viewDetailsLink: '#',
+        viewSiteLink: 'https://ai-physique-rater.vercel.app'
     },
     {
         id: 2,
@@ -132,14 +133,19 @@ export default function Projects() {
 
                                 {/* Action Buttons */}
                                 <div className={`flex flex-col sm:flex-row gap-4 ${index % 2 === 1 ? 'lg:justify-end' : ''}`}>
-                                    <button className="group flex items-center justify-center gap-3 px-8 py-4 bg-white border border-gray-600 rounded-2xl font-semibold text-black cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/25 hover:-translate-y-1">
-                                        <Eye className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                                        View Details
-                                    </button>
-                                    <button className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/5 backdrop-blur-sm border border-gray-600 hover:bg-white/10 hover:border-gray-400 rounded-2xl font-semibold text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                                        <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                                        View Live Site
-                                    </button>
+                                    {project.viewDetailsLink && (
+                                        <Link href={project.viewDetailsLink} className="group flex items-center justify-center gap-3 px-8 py-4 bg-white border border-gray-600 rounded-2xl font-semibold text-black cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/25 hover:-translate-y-1">
+                                            <Eye className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                                            View Details
+                                        </Link>
+                                    )}
+                                    {project.viewSiteLink && (
+                                        <Link href={project.viewSiteLink} className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/5 backdrop-blur-sm border border-gray-600 hover:bg-white/10 hover:border-gray-400 rounded-2xl font-semibold text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                            <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                                            View Live Site
+                                        </Link>
+                                    )}
+
                                 </div>
                             </div>
                         </div>

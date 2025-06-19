@@ -57,7 +57,7 @@ const Navbar = () => {
             <div className="relative flex flex-wrap items-center justify-between gap-4">
               {/* Logo */}
               <div className="flex items-center space-x-3">
-                <img src={"/logo.png"} className="h-10 w-10 text-black" />
+                <img src={"/logo.png"} className="h-10 w-10 text-black rounded-md" />
 
                 <span className="text-xl md:hidden font-bold tracking-tight text-white uppercase">Automnex</span>
               </div>
