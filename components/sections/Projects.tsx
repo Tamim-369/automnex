@@ -6,17 +6,7 @@ import Link from 'next/link';
 
 
 
-const getTechIcon = (tech: any) => {
-    const techLower = tech.toLowerCase();
-    if (techLower.includes('react') || techLower.includes('next') || techLower.includes('vue')) {
-        return <Code2 className="w-4 h-4" />;
-    } else if (techLower.includes('database') || techLower.includes('mongo') || techLower.includes('postgres')) {
-        return <Database className="w-4 h-4" />;
-    } else if (techLower.includes('mobile') || techLower.includes('native')) {
-        return <Smartphone className="w-4 h-4" />;
-    }
-    return <Globe className="w-4 h-4" />;
-};
+
 
 export default function Projects() {
     return (
@@ -86,9 +76,8 @@ export default function Projects() {
                                         {project.techStack.map((tech: any, techIndex: number) => (
                                             <div
                                                 key={techIndex}
-                                                className="flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-200 hover:bg-white/10 transition-colors duration-300"
+                                                className="flex items-center gap-2 px-4 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-200 hover:bg-white/10 transition-colors duration-300"
                                             >
-                                                {getTechIcon(tech)}
                                                 <span>{tech}</span>
                                             </div>
                                         ))}
@@ -98,13 +87,13 @@ export default function Projects() {
                                 {/* Action Buttons */}
                                 <div className={`flex flex-col sm:flex-row gap-4 ${index % 2 === 1 ? 'lg:justify-end' : ''}`}>
                                     {project.viewDetailsLink && (
-                                        <Link href={project.viewDetailsLink} className="group flex items-center justify-center gap-3 px-8 py-4 bg-white border border-gray-600 rounded-2xl font-semibold text-black cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/25 hover:-translate-y-1">
+                                        <Link href={project.viewDetailsLink} className="group flex items-center justify-center gap-3 px-5 py-3 bg-white border border-gray-600 rounded-2xl font-semibold text-black cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/25 hover:-translate-y-1">
                                             <Eye className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                                             View Details
                                         </Link>
                                     )}
                                     {project.viewSiteLink && (
-                                        <Link href={project.viewSiteLink} className="group flex items-center justify-center gap-3 px-8 py-4 bg-white/5 backdrop-blur-sm border border-gray-600 hover:bg-white/10 hover:border-gray-400 rounded-2xl font-semibold text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                        <Link href={project.viewSiteLink} className="group flex items-center justify-center gap-3 px-5 py-3 bg-white/5 backdrop-blur-sm border border-gray-600 hover:bg-white/10 hover:border-gray-400 rounded-2xl font-semibold text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                                             <ExternalLink className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
                                             View Live Site
                                         </Link>

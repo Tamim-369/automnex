@@ -8,7 +8,7 @@ export const projects = [
       "An innovative AI-powered application that analyzes user-uploaded images to provide personalized physique ratings and exercise suggestions based on different studies.",
     image: "/projects/physiqueRater.png",
     techStack: ["Next.js", "Groq", "Langchain", "Tailwind CSS", "TypeScript"],
-    // viewDetailsLink: '#',
+    viewDetailsLink: "#",
     viewSiteLink: "https://ai-physique-rater.vercel.app",
   },
 ];
