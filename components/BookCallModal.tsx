@@ -137,14 +137,15 @@ export default function BookCallModal({ isOpen, onClose }: BookCallModalProps) {
                                     <PopoverTrigger asChild>
                                         <Button
                                             variant="outline"
-                                            className="w-full justify-between font-normal bg-gray-800/40 backdrop-blur-sm text-white border border-white/15 rounded-xl px-5 py-3 focus:outline-none focus:border-white/25 transition-colors"
+                                            className="w-full justify-between font-normal bg-gray-800 backdrop-blur-sm text-white border border-white/15 rounded-xl px-5 py-3 focus:outline-none focus:border-white/25 transition-colors"
                                         >
                                             {selectedDate ? selectedDate.toLocaleDateString() : "Select date"}
                                         </Button>
                                     </PopoverTrigger>
-                                    <PopoverContent className="w-auto p-0 bg-transparent backdrop-blur-3xl border border-white/15 rounded-xl" align="start">
+                                    <PopoverContent className="w-auto p-0 bg-gray-900/70 backdrop-blur-xl border border-white/15 rounded-xl" align="start">
                                         <Calendar
                                             mode="single"
+                                            buttonVariant={'outline'}
                                             selected={selectedDate}
                                             onSelect={handleDateSelect}
                                             initialFocus

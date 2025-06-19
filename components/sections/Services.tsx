@@ -88,11 +88,11 @@ export default function Services() {
                     Our Premium Services
                 </h2>
 
-                <div className="grid gap-12 md:grid-cols-2 xl:grid-cols-3">
+                <div className="grid gap-12 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 ">
                     {services?.map((service, i) => (
                         <div
                             key={i}
-                            className="w-full max-w-md bg-black/20 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 rounded-2xl overflow-hidden">
+                            className="w-full md:max-w-md bg-black/20 backdrop-blur-lg border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 rounded-2xl overflow-hidden">
                             <div className="p-6 bg-black/30 ">
                                 <div className="flex items-center space-x-4">
                                     <div className="p-3 bg-white/10 rounded-full">

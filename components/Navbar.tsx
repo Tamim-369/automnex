@@ -4,10 +4,12 @@ import { Menu, X, Zap, ChevronDown, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Link from 'next/link';
+import BookCallModal from './BookCallModal';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState('Home');
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -79,6 +81,8 @@ const Navbar = () => {
                 <Button
                   size="lg"
                   className="rounded-xl bg-gradient-to-r from-white to-gray-300 px-6 sm:px-8 py-4 font-semibold text-black shadow-lg transition-all duration-300 hover:scale-105"
+                  onClick={() => setIsModalOpen(true)}
+
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     Book A Call
@@ -130,9 +134,12 @@ const Navbar = () => {
 
                       {/* Mobile CTA */}
                       <div className="px-6">
-                        <Button className="w-full rounded-xl bg-gradient-to-r from-white to-gray-300 py-5 font-semibold text-black shadow-lg transition-all duration-300 hover:shadow-xl border-0">
+                        <Button className="w-full rounded-xl bg-gradient-to-r from-white to-gray-300 py-5 font-semibold text-black shadow-lg transition-all duration-300 hover:shadow-xl border-0"
+                          onClick={() => setIsModalOpen(true)}
+
+                        >
                           <span className="flex items-center justify-center gap-2">
-                            Get Started
+                            Book A Call
                             <ArrowRight className="h-4 w-4" />
                           </span>
                         </Button>
@@ -146,7 +153,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-
+      <BookCallModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <style jsx>{`
         @keyframes float {
           0%, 100% { transform: translate(0px, 0px) rotate(0deg); }
