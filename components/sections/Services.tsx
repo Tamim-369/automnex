@@ -19,7 +19,7 @@ export default function Services() {
 
             <div className="relative max-w-7xl xl:max-w-6xl mx-auto">
                 <h2 className="text-5xl font-extrabold mb-12 text-center tracking-tight text-white">
-                    Our Premium Services
+                    Services We Offer
                 </h2>
 
                 <div className="grid gap-12 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 ">

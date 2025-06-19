@@ -1,4 +1,5 @@
 "use client";
+import { faqs } from "@/lib/data";
 import React, { useState } from "react";
 
 import { useEffect } from 'react';
@@ -25,24 +26,7 @@ const FAQ = () => {
         };
     }, []);
 
-    const faqs = [
-        {
-            question: "What services does Automnex offer?",
-            answer: "Automnex provides advanced LLM-powered chatbot development, including prompt engineering, custom LLM fine-tuning, RAG implementation, multi-lingual support, context-aware responses, and enterprise data integration.",
-        },
-        {
-            question: "How can I get started with Automnex?",
-            answer: "To get started, simply fill out the contact form with your details, budget idea, and description. Our team will reach out to you shortly to discuss your project.",
-        },
-        {
-            question: "Is there a cost for initial consultation?",
-            answer: "No, the initial consultation is completely free. We’ll assess your needs and provide a tailored solution without any upfront cost.",
-        },
-        {
-            question: "What is the typical project timeline?",
-            answer: "The timeline varies based on project complexity, but most projects are completed within 4-8 weeks. We’ll provide a detailed schedule after the initial consultation.",
-        },
-    ];
+
 
     return (
         <section id="faq" className="relative w-full min-h-screen px-6 py-10 text-white overflow-hidden border-t flex justify-center items-center">
