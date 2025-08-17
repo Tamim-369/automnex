@@ -1,4 +1,4 @@
-import { BrainCog, Code2, Rocket } from "lucide-react";
+import { BrainCog, Code2, DollarSign, Rocket } from "lucide-react";
 
 export const projects = [
   {
@@ -30,15 +30,31 @@ export const services = [
   },
   {
     icon: Code2,
-    title: "SaaS Dashboard Builder",
+    title: "Automation Scripts with UI",
     description:
-      "Plug-and-play dashboards to visualize your SaaS metrics, powered by AI and intuitive APIs.",
+      "Simple and easy to use automation scripts with interactive UI to automate the most complex task you do again and again.",
     features: [
-      "Real-time metrics visualization",
-      "Customizable widgets",
-      "AI-powered insights",
-      "API integrations",
-      "User access control",
+      "Web Automation",
+      "Desktop Automation",
+      "Built using custom code or tools like N8N, Zapier, Make.com",
+      "Interactive UI for full control",
+      "Multi-step workflow automation",
+      "Scheduling and event-based triggers",
+      "Error handling with notifications",
+    ],
+  },
+  {
+    icon: DollarSign,
+    title: "Custom Lead Generation Agents",
+    description:
+      "Fully automatic lead generation agent for collecting more leads.",
+    features: [
+      "Automated lead capture from multiple channels",
+      "Customizable lead qualification and scoring",
+      "Integration with popular CRMs and marketing platforms",
+      "Real-time lead alerts and notifications",
+      "AI-powered lead targeting and personalization",
+      "Multi-channel outreach automation (email, chat, calls)",
     ],
   },
   {
@@ -55,29 +71,19 @@ export const services = [
     ],
   },
   {
-    icon: Rocket,
-    title: "LLM PDF Q&A Agent",
+    icon: DollarSign,
+    title: "SAAS App Development",
     description:
-      "Upload PDFs and get instant, context-aware answers powered by cutting-edge LLM embeddings.",
+      "Build and maintain SAAS application. You give the idea, We turn into reality.",
     features: [
-      "Semantic PDF content extraction",
-      "Contextual real-time answers",
-      "Multi-document support",
-      "Lightning-fast response times",
-      "Intuitive user interface",
-    ],
-  },
-  {
-    icon: Rocket,
-    title: "LLM PDF Q&A Agent",
-    description:
-      "Upload PDFs and get instant, context-aware answers powered by cutting-edge LLM embeddings.",
-    features: [
-      "Semantic PDF content extraction",
-      "Contextual real-time answers",
-      "Multi-document support",
-      "Lightning-fast response times",
-      "Intuitive user interface",
+      "Full Stack SAAS App with integrated payments",
+      "Lifetime maintenance service",
+      "2 months free support",
+      "Fast and interactive UI",
+      "Scalable and secure architecture",
+      "Custom feature development",
+      "Responsive design for all devices",
+      "API integration and third-party services",
     ],
   },
 ];
