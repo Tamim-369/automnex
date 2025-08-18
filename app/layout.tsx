@@ -56,6 +56,7 @@ export default function RootLayout({
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="lazyOnload"
         />
+        <meta name="google-site-verification" content="VH58kUrv42-15apewxi2IZ2tmnf1X3hK3aP0a33N7F8" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
