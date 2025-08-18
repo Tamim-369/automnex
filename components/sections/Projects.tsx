@@ -34,17 +34,14 @@ export default function Projects() {
                     </p>
                 </div>
 
-                <div className="space-y-32">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                     {projects.map((project: any, index: number) => (
                         <div
                             key={project.id}
-                            className={`flex flex-col items-center gap-12 lg:gap-16 ${index % 2 === 0
-                                ? 'lg:flex-row lg:text-left'
-                                : 'lg:flex-row-reverse lg:text-right'
-                                }`}
+                            className={`flex flex-col items-center gap-12 lg:gap-16 lg:flex-row lg:text-left bg-transparent backdrop-blur-md border-gray-700 border p-10 rounded-xl`}
                         >
                             {/* Project Image */}
-                            <div className="flex-1 group">
+                            {/* <div className="flex-1 group">
                                 <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
                                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-gray-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                     <img
@@ -54,10 +51,10 @@ export default function Projects() {
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                                 </div>
-                            </div>
+                            </div> */}
 
                             {/* Project Content */}
-                            <div className={`flex-1 space-y-8 ${index % 2 === 1 ? 'lg:text-right' : 'lg:text-left'}`}>
+                            <div className={`flex-1 space-y-8 `}>
                                 <div>
                                     <h3 className="text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
                                         {project.title}
@@ -68,24 +65,27 @@ export default function Projects() {
                                 </div>
 
                                 {/* Tech Stack */}
-                                <div className={index % 2 === 1 ? 'lg:flex lg:flex-col lg:items-end' : ''}>
-                                    <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">
-                                        Tech Stack
-                                    </h4>
-                                    <div className={`flex flex-wrap gap-3 ${index % 2 === 1 ? 'lg:justify-end' : ''}`}>
-                                        {project.techStack.map((tech: any, techIndex: number) => (
-                                            <div
-                                                key={techIndex}
-                                                className="flex items-center gap-2 px-4 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-200 hover:bg-white/10 transition-colors duration-300"
-                                            >
-                                                <span>{tech}</span>
-                                            </div>
-                                        ))}
+                                {project.techStack.length ? (
+                                    <div>
+                                        <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">
+                                            Tech Stack
+                                        </h4>
+                                        <div className={`flex flex-wrap gap-3 `}>
+                                            {project.techStack.map((tech: any, techIndex: number) => (
+                                                <div
+                                                    key={techIndex}
+                                                    className="flex items-center gap-2 px-4 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-gray-200 hover:bg-white/10 transition-colors duration-300"
+                                                >
+                                                    <span>{tech}</span>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
+                                ) : ""}
+
 
                                 {/* Action Buttons */}
-                                <div className={`flex flex-col sm:flex-row gap-4 ${index % 2 === 1 ? 'lg:justify-end' : ''}`}>
+                                <div className={`flex flex-col sm:flex-row gap-4 `}>
                                     {project.viewDetailsLink && (
                                         <Link href={project.viewDetailsLink} className="group flex items-center justify-center gap-3 px-5 py-3 bg-white border border-gray-600 rounded-2xl font-semibold text-black cursor-pointer transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/25 hover:-translate-y-1">
                                             <Eye className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />

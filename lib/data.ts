@@ -3,12 +3,20 @@ import { BrainCog, Code2, DollarSign, Rocket } from "lucide-react";
 export const projects = [
   {
     id: 1,
+    title: "Customer Support Agent",
+    description:
+      "An advanced AI Agent that uses your business data and talk to customers like a real human. Uses most up to date AI model.",
+    image: "/projects/physiqueRater.png",
+    techStack: [],
+    viewSiteLink: "https://ai-physique-rater.vercel.app",
+  },
+  {
+    id: 1,
     title: "AI Physique Rater",
     description:
       "An innovative AI-powered application that analyzes user-uploaded images to provide personalized physique ratings and exercise suggestions based on different studies.",
     image: "/projects/physiqueRater.png",
     techStack: ["Next.js", "Groq", "Langchain", "Tailwind CSS", "TypeScript"],
-    viewDetailsLink: "#",
     viewSiteLink: "https://ai-physique-rater.vercel.app",
   },
 ];
@@ -107,5 +115,38 @@ export const faqs = [
     question: "What is the typical project timeline?",
     answer:
       "The timeline varies based on project complexity, but most projects are completed within 4-8 weeks. We’ll provide a detailed schedule after the initial consultation.",
+  },
+];
+export const testimonials = [
+  {
+    id: 1,
+    name: "Tanvir",
+    role: "CEO",
+    company: "HITEKBD",
+    image: "clients/tanvir.png",
+    content:
+      "They are the best in the game. We have automated tons of processes in our business and we will automate more in future.",
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: "Sayeed",
+    role: "Founder",
+    company: "Sunaan",
+    avatar: "SD",
+    image: "clients/sunaan.png",
+    content:
+      "They can automate basically anything. They fully automated how I track my expense using AI Agents.",
+    rating: 5,
+  },
+  {
+    id: 3,
+    name: "Ashish Jha",
+    role: "Founder",
+    company: "BLUEFIRE REDTEAM",
+    avatar: "ER",
+    image: "clients/asish.png",
+    content: "Outstanding quality and innovative approach. Highly recommend.",
+    rating: 5,
   },
 ];
